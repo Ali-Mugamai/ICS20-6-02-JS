@@ -19,7 +19,7 @@ if (navigator.serviceWorker) {
 function myButtonClicked() {
   if (localStorage.updateCookieCount) {
     localStorage.updateCookieCount = Number(localStorage.updateCookieCount) + 1
-  } else { 
+  } else {
     localStorage.updateCookieCount = +1
   }
   document.getElementById("answer").innerHTML =
