@@ -15,9 +15,11 @@ if (navigator.serviceWorker) {
   })
 }
 
+let cookies = 0
 /**
  * This function displays an alert.
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  cookies = cookies + 1
+  document.getElementById("hello-world").innerHTML = cookies
 }
