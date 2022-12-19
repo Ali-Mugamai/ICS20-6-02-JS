@@ -10,7 +10,7 @@
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS20-Unit-6-02-JS/sw.js", {
     scope: "/ICS20-Unit-6-02-JS/",
-  });
+  })
 }
 
 /**
@@ -18,10 +18,10 @@ if (navigator.serviceWorker) {
  */
 function myButtonClicked() {
   if (localStorage.updateCookieCount) {
-    localStorage.updateCookieCount = Number(localStorage.updateCookieCount) + 1;
+    localStorage.updateCookieCount = Number(localStorage.updateCookieCount) + 1
   } else {
-    localStorage.updateCookieCount = +1;
+    localStorage.updateCookieCount = +1
   }
   document.getElementById("answer").innerHTML =
-    "You have clicked the cookie " + localStorage.updateCookieCount + " times";
+    "You have clicked the cookie " + localStorage.updateCookieCount + " times"
 }
