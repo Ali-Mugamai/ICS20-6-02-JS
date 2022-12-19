@@ -1,25 +1,27 @@
-// Copyright (c) 2020 ali-mugamai All rights reserved
+// Copyright (c) 2022 Ali Mugamai All rights reserved
 //
-// Created by: ali mugamai
-// Created on: Sep 2020
+// Created by: Ali Mugamai
+// Created on: Dec 2022
 // This file contains the JS functions for index.html
 
-"use strict"
-
 /**
- * Check servie worker.
+ * Check service worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
-  })
+  navigator.serviceWorker.register("/ICS20-Unit-6-02-JS/sw.js", {
+    scope: "/ICS20-Unit-6-02-JS/",
+  });
 }
 
-let cookies = 0
 /**
- * This function displays an alert.
+ * Input
  */
 function myButtonClicked() {
-  cookies = cookies + 1
-  document.getElementById("hello-world").innerHTML = cookies
+  if (localStorage.updateCookieCount) {
+    localStorage.updateCookieCount = Number(localStorage.updateCookieCount) + 1;
+  } else {
+    localStorage.updateCookieCount = +1;
+  }
+  document.getElementById("answer").innerHTML =
+    "You have clicked the cookie " + localStorage.updateCookieCount + " times";
 }
